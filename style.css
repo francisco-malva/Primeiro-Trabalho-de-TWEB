@@ -44,3 +44,19 @@ nav ul li {
 .nav-separator{
     padding-right: 0px;
 }
+
+
+@media all and (max-width: 1180px) {
+
+    nav ul{
+        display:block;
+        width: 50px;
+        height: 50px;
+        border: none;
+        margin: 20px;
+        visibility: hidden;
+        position: fixed;
+        box-sizing: border-box;
+    }
+    
+}
