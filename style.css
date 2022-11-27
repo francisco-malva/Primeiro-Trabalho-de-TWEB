@@ -84,6 +84,31 @@ nav ul li {
     line-height: 1.7;
 }
 
+#oficial-network {
+    background-image: linear-gradient(to right, rgb(217, 217, 217), rgb(76, 75, 75));
+}
+
+#oficial-network ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#oficial-network ul li{
+    padding: 00.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f7f7f7;
+
+}
+
+#oficial-network ul li img {
+    width: auto;
+    height: 64px;
+
+}
 #compromises-info {
     background-color: #323e48;
     color: #fff;
@@ -93,6 +118,12 @@ nav ul li {
     align-items: center;
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+div #compromises-info {
+    display: block;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 #compromises-info h2 {
@@ -143,7 +174,7 @@ nav ul li {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    align-content: space-around;
+    justify-content: space-evenly;
 }
 
 #opportunities-info .first-line li{
@@ -214,7 +245,7 @@ nav ul li {
     padding-top: 0.5rem;
 }
 
-#discover-new .discover-column li p{
+#discover-new .discover-column li p {
     text-align: justify;
     font-weight: bold;
     text-decoration: none;
