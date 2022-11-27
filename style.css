@@ -112,6 +112,7 @@ nav ul li {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -122,6 +123,14 @@ nav ul li {
     fill: #fff;
 }
 
+#compromises-info #phrase {
+    text-align: center;
+    font-size: smaller;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: 3px solid white;
+}
+
 #opportunities-info {
     display: flex;
     flex-direction: column;
@@ -130,36 +139,117 @@ nav ul li {
     background-color: #f7f7f7;
 }
 
+#opportunities-info .first-line {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-content: space-around;
+}
+
+#opportunities-info .first-line li{
+    margin: 2rem;
+    padding: 3rem;
+    border: black solid 1px;
+    font-weight: bold;
+    align-content: center;
+}
+
+#opportunities-info .first-line li img{
+    width: auto;
+    height: 3rem;
+    fill:#13d0ca;
+}
+
+#opportunities-info .second-line {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-content: space-around;
+}
+
+#opportunities-info .second-line li{
+    margin: 2rem;
+    padding: 3rem;
+    border: black solid 1px;
+    font-weight: bold;
+    align-content: center;
+}
+
+#opportunities-info .second-line li img{
+    width: auto;
+    height: 3rem;
+    fill:#13d0ca;
+}
+
 #discover-new {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
     background-color: #767171;
 }
 
 #discover-new h2 {
-    color: #fff;
     text-align: center;
+    color: #fff;
     font-size: 2.5rem;
 }
 
-#discover-new ul {
+#discover-new ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    color: #fff;
+    justify-content: space-evenly;
 }
 
-.discover-column {
+#discover-new .discover-column {
     display: flex;
     flex-direction: column;
+    text-align: justify;
+    text-decoration: underline;
 }
 
-#discover-new ul li {
-    color: #fff;
-    flex-direction: row;
+#discover-new .discover-column li {
+    display: flex;
+    padding-top: 0.5rem;
+}
+
+#discover-new .discover-column li p{
+    text-align: justify;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .icon {
     transform: scale(1.5);
     color: gray;
     margin: 50px 100px 50px 100px;
+}
+
+#footer-last h2{
+    color: #fff;
+    font-size: 2.5rem;
+}
+#footer-last{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: #101820;
+}
+
+#footer-last ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: #f7f7f7;
+    justify-content: space-between;
+}
+
+#footer-last .brands{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    font-weight: bold;
 }
 
 @media all and (max-width: 1200px) {
@@ -174,6 +264,7 @@ nav ul li {
         align-items: center;
         justify-content: space-between;
         flex-grow: 1;
+        overflow: wrap;
     }
 
 }
