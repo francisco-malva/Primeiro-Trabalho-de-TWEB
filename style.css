@@ -28,6 +28,11 @@ header {
     align-content: center;
 }
 
+#brand-banner {
+    width: 100%;
+    height: auto;
+}
+
 #sandwich-nav {
     display: none;
 }
@@ -204,7 +209,7 @@ div #compromises-info {
 #discover-new {
     display: flex;
     flex-direction: column;
-    padding: 3em;
+    padding: 3em 0em 3em 0em;
     justify-content: center;
     background-color: #767171;
 }
@@ -228,17 +233,28 @@ div #compromises-info {
     width: 33.333333%;
 }
 
+
 #discover-new .discover-column {
     padding: 0%;
     display: flex;
     flex-direction: column;
     text-align: left;
-    text-decoration: underline;
 }
 
-.discover-column li {
+#discover-new .discover-column .content ul {
+    text-decoration: underline;
+    list-style-type: none;
     display: flex;
-    padding-top: 0.5rem;
+    flex-direction: column;
+    padding: 0;
+}
+
+#discover-new .discover-column .content ul li {
+    text-decoration: underline;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
 }
 
 #discover-new .discover-column li p {
@@ -270,7 +286,16 @@ div #compromises-info {
     flex-direction: row;
     list-style-type: none;
     color: #f7f7f7;
-    justify-content: space-between;
+    padding: 0;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+#footer-last ul li {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    list-style-type: none;
 }
 
 #footer-last .brands {
@@ -278,6 +303,32 @@ div #compromises-info {
     flex-direction: column;
     align-content: space-around;
     font-weight: bold;
+}
+
+#finance-calculator {
+    padding: 10px;
+}
+
+#finance-calculator label {
+    margin-top: 10px;
+}
+
+#finance-calculator input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#finance-calculator select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.model-select {
+    display: none;
+}
+
+.price-input input {
+    display: inline !important;
 }
 
 @media all and (max-width: 1200px) {
@@ -294,5 +345,4 @@ div #compromises-info {
         flex-grow: 1;
         overflow: wrap;
     }
-
 }

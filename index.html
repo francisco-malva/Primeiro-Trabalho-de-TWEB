@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <link href='https://css.gg/menu-boxed.css' rel='stylesheet'>
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -52,22 +51,47 @@
                     </li>
                 </ul>
             </nav>
-        <div>
-            
-        </div>    
+            <div>
+
+            </div>
     </header>
     <main>
-        <div id="oficial-network">
-            <ul>
-                <li><p>CARROS USADOS DA NOSSA REDE OFICIAL</p></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-                <li><img src="imgs/icons/check-circle.svg"></li>
-            </ul>
+        <div id="finance-calculator">
+            <h2>Calculadora de Financiamento</h2>
+            <form>
+                <label for="maker">Marca</label>
+                <select title="Marca" name="maker" value="" required>
+                    <option disabled selected value> -- SELECIONE UMA MARCA -- </option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="volkswagen">Volkswagen</option>
+                </select>
+                <span class="model-select">
+                    <label for="model">Modelo</label>
+                    <select title="Modelo" name="model" required>
+                    </select>
+                </span>
+                <label for="date">Ano de Matrícula</label>
+                <input name="date" title="Ano de Matrícula" type="number" placeholder="1900" min="1900" max="9999"
+                    step="1" required>
+                <label for="price">Preço de Venda</label>
+                <div class="price-input"><input name="price" title="Preço" type="number" placeholder="1000,00"
+                        min="1000" max="999999" step="0.01" required> €</div>
+                <input type="submit" value="Calcular">
+            </form>
+            <div class="result-box">
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
         </div>
+        <img id="brand-banner" src="imgs/banner_desktop_marcas.jpg">
         <div id="interim-info">
             <h2>PESQUISE E RESERVE ON-LINE</h2>
             <p>Na <strong>Spoticar</strong>, dispomos de um vasto stock de veículos semi-novos aos quais pode aceder de
@@ -75,7 +99,7 @@
             <p>Agora pode optar pelo nosso serviço de entrega em sua casa<sup>1</sup>. De outra forma, os nossos 80
                 pontos de venda
                 estão prontos para o receber.</p>
-            <p>[1] Nos concessionários aderentes.</p>
+            <p><sup>1</sup> Nos concessionários aderentes.</p>
         </div>
         <div id="compromises-info">
             <h2><a>COMPROMISSOS DO SITE</a></h2>
@@ -96,7 +120,8 @@
                     <p>FINANCIAMENTO PERSONALIZADO</p>
                 </li>
             </ul>
-            <p id="phrase">VER OS NOSSOS COMPROMISSO, AS NOSSAS GARANTIAS E AS VANTAGENS SPOTICAR PARA A COMPRA DE UM VEÍCULO ELÉTRICO OU HÍBRIDO > </p>
+            <p id="phrase">VER OS NOSSOS COMPROMISSO, AS NOSSAS GARANTIAS E AS VANTAGENS SPOTICAR PARA A COMPRA DE UM
+                VEÍCULO ELÉTRICO OU HÍBRIDO > </p>
         </div>
         <div id="opportunities-info">
             <h2>OPORTUNIDADES SELECIONADAS POR CATEGORIA</h2>
@@ -136,70 +161,112 @@
             <ul>
                 <li>
                     <ul class="discover-column">
-                        <li><p class="">Categorias</p></li>
-                        <li>SUV's e 4x4</li>
-                        <li>Carrinhas</li>
-                        <li>Berlinas</li>
-                        <li>Familiares</li>
-                        <li>Citadinos</li>
-                        <li>ver mais</li>
+                        <li>
+                            Categorias
+                        </li>
+                        <li class="content">
+                            <ul>
+                                <li>SUV's e 4x4</li>
+                                <li>Carrinhas</li>
+                                <li>Berlinas</li>
+                                <li>Familiares</li>
+                                <li>Citadinos</li>
+                                <li>ver mais</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <ul class="discover-column">
-                        <li><p>Características</p></li>
-                        <li>Usado com 4 rodas motorizes</li>
-                        <li>Usado com 7 lugares</li>
-                        <li>Usados Híbridos</li>
-                        <li>Usados Elétricos</li>
-                        <li>Usados com mudanças automáticas</li>
-                    </ul>
+                        <li>
+                            Características
+                        </li>
+                        <li class="content">
+                            <ul>
+                                <li>Usado com 4 rodas motorizes</li>
+                                <li>Usado com 7 lugares</li>
+                                <li>Usados Híbridos</li>
+                                <li>Usados Elétricos</li>
+                                <li>Usados com mudanças automáticas</li>
+                            </ul>
+                        </li>
                 </li>
-                <li>
-                    <ul class="discover-column">
-                        <li><p>Outros</p></li>
-                        <li>Usados premium</li>
-                        <li>Usados recentes</li>
-                        <li>Usados a menos de 15000€</li>
-                        <li>Usados a menos de 20000€</li>
-                    </ul>
-                </li>
+
+
             </ul>
-            
+            </li>
+            <li>
+                <ul class="discover-column">
+                    <li>
+                        Outros
+                    </li>
+                    <li class="content">
+                        <ul>
+                            <li>Usados premium</li>
+                            <li>Usados recentes</li>
+                            <li>Usados a menos de 15000€</li>
+                            <li>Usados a menos de 20000€</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            </ul>
+
             <h2>
                 PESQUISAR POR LOCALIZAÇÃO
             </h2>
             <ul>
                 <li>
                     <ul class="discover-column">
-                        <li><p>Regiões</p></li>
-                        <li>Norte</li>
-                        <li>Centro</li>
-                        <li>Sul</li>
-                        <li>Madeira</li>
-                        <li>Açores</li>
+                        <li>
+                            Regiões
+                        </li>
+                        <li class="content">
+                            <ul>
+                                <li>Norte</li>
+                                <li>Centro</li>
+                                <li>Sul</li>
+                                <li>Madeira</li>
+                                <li>Açores</li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
                 <li>
                     <ul class="discover-column">
-                        <li><p>Regiões</p></li>
-                        <li>Grande Lisboa</li>
-                        <li>Grande Porto</li>
-                        <li>Alentejo</li>
-                        <li>Algarve</li>
+                        <li>
+                            Regiões
+                        </li>
+                        <li class="content">
+                            <ul>
+                                <li>Grande Lisboa</li>
+                                <li>Grande Porto</li>
+                                <li>Alentejo</li>
+                                <li>Algarve</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <ul class="discover-column">
-                        <li><p>Cidades</p></li>
-                        <li>Porto</li>
-                        <li>Lisboa</li>
-                        <li>Coimbra</li>
-                        <li>Almada</li>
-                        <li>Santarém</li>
-                        <li>ver mais</li>
-                    </ul>
+                        <li>
+                            Cidades
+                        </li>
+                        <li class="content">
+                            <ul>
+                                <li>Porto</li>
+                                <li>Lisboa</li>
+                                <li>Coimbra</li>
+                                <li>Almada</li>
+                                <li>Santarém</li>
+                                <li>ver mais</li>
+                            </ul>
+                        </li>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
 
@@ -208,7 +275,9 @@
             <ul>
                 <li>
                     <ul class="brands">
-                        <li><p>OPEL USADOS</p></li>
+                        <li>
+                            OPEL USADOS
+                        </li>
                         <li>Astra</li>
                         <li>Corsa</li>
                         <li>Grandland</li>
@@ -220,7 +289,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>CITROEN USADOS</p></li>
+                        <li>
+                            CITROEN USADOS
+                        </li>
                         <li>C4</li>
                         <li>C5 Aircross</li>
                         <li>C3</li>
@@ -232,7 +303,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>PEUGOT USADOS</p></li>
+                        <li>
+                            PEUGOT USADOS
+                        </li>
                         <li>308</li>
                         <li>2008</li>
                         <li>208</li>
@@ -244,7 +317,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>DS AUTOMOBILES USADOS</p></li>
+                        <li>
+                            DS AUTOMOBILES USADOS
+                        </li>
                         <li>DS7 Crossback</li>
                         <li>DS3 Crossback</li>
                         <li>DS4</li>
@@ -253,7 +328,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>FIAT USADOS</p></li>
+                        <li>
+                            FIAT USADOS
+                        </li>
                         <li>500</li>
                         <li>Doblo</li>
                         <li>Punto</li>
@@ -265,7 +342,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>VOLKSWAGEN</p></li>
+                        <li>
+                            VOLKSWAGEN
+                        </li>
                         <li>Sem resultados</li>
                     </ul>
                 </li>
@@ -273,7 +352,9 @@
             <ul>
                 <li>
                     <ul class="brands">
-                        <li><p>RENAUT</p></li>
+                        <li>
+                            RENAUT
+                        </li>
                         <li>Kadjar</li>
                         <li>Megane</li>
                         <li>Captur</li>
@@ -283,14 +364,18 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>NISSAN</p></li>
+                        <li>
+                            NISSAN
+                        </li>
                         <li>Qashqai</li>
                         <li>X-Trail</li>
                     </ul>
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>KIA</p></li>
+                        <li>
+                            KIA
+                        </li>
                         <li>Niro</li>
                         <li>Picanto</li>
                         <li>Sportage</li>
@@ -299,13 +384,17 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>FORD</p></li>
+                        <li>
+                            <p>FORD</p>
+                        </li>
                         <li>Toumeo</li>
                     </ul>
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>SEAT</p></li>
+                        <li>
+                            SEAT
+                        </li>
                         <li>Ateca</li>
                         <li>Ibiza</li>
                         <li>Leon</li>
@@ -313,7 +402,9 @@
                 </li>
                 <li>
                     <ul class="brands">
-                        <li><p>OUTRAS MARCAS</p></li>
+                        <li>
+                            OUTRAS MARCAS
+                        </li>
                         <li>MAZDA</li>
                         <li>HYUNDAY</li>
                         <li>JEEP</li>
@@ -326,19 +417,20 @@
             </ul>
             <ul>
                 <li>
-                    <li>Mapa do site</li>
-                    <li>Mapa do site retoma</li>
-                    <li>DS Certified</li>
-                    <li>Opel Usados Certificados</li>
-                    <li>Resolução de litígios</li>
-                    <li>Menções Legais</li>
-                    <li>Consentimento de cookies</li>
-                    <li>Política de Cookies</li>
-                    <li>Política de Privacidade</li>
+                <li>Mapa do site</li>
+                <li>Mapa do site retoma</li>
+                <li>DS Certified</li>
+                <li>Opel Usados Certificados</li>
+                <li>Resolução de litígios</li>
+                <li>Menções Legais</li>
+                <li>Consentimento de cookies</li>
+                <li>Política de Cookies</li>
+                <li>Política de Privacidade</li>
                 </li>
             </ul>
         </div>
     </footer>
+    <script src="scripts/script.js" defer></script>
 </body>
 
 </html>
