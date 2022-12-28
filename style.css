@@ -323,11 +323,37 @@ div #compromises-info {
     margin-bottom: 10px;
 }
 
+.finance-results {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.finance-results ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finance-results ul :first-child {
+    font-size: large;
+    font-weight: bold;
+}
+
 .model-select {
     display: none;
 }
 
 .price-input input {
+    display: inline !important;
+}
+
+.km-input input {
     display: inline !important;
 }
 

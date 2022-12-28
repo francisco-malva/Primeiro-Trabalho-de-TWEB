@@ -22,10 +22,31 @@ class FinanceCalculator {
         this.modelSelectorSpan.style.display = "block";
     }
 
-    #getDate() {
+    #calculatePrice(formData) {
+        let c1;
+        let c2;
 
+        let price = Number.parseFloat(formData.get("price"));
+        let year = (new Date().getFullYear()) - Number.parseInt(formData.get("date"));
+        let km = Number.parseInt(formData.get("kms"));
+
+        c1 = year > 10 ? 0.04 : 0.05;
+
+        if (km <= 30000)
+            c2 = 1;
+        else if (km <= 70000)
+            c2 = 0.95;
+        else
+            c2 = 0.9;
+
+        return price * (1 - year * c1) * c2;
     }
-    #onSubmitFinanceForm() {
+
+    #onSubmitFinanceForm(event) {
+        let data = new FormData(event.target);
+
+        alert(this.#calculatePrice(data, 0.0));
+
         return false;
     }
 

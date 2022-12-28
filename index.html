@@ -79,15 +79,30 @@
                     step="1" required>
                 <label for="price">Preço de Venda</label>
                 <div class="price-input"><input name="price" title="Preço" type="number" placeholder="1000,00"
-                        min="1000" max="999999" step="0.01" required> €</div>
+                        min="1000" max="9999" step="0.01" required> €</div>
+                <label for="kms">Quilometragem</label>
+                <div class="km-input"><input name="kms" title="Quilometragem" type="number" placeholder="1000" min="0"
+                        max="999999" step="1" required> km</div>
                 <input type="submit" value="Calcular">
             </form>
-            <div class="result-box">
+            <div class="finance-results">
                 <div>
+                    <h3>Como Novo</h3>
+                    <ul>
+                        <li>9.999€</li>
+                    </ul>
                 </div>
                 <div>
+                    <h3>Bom Estado</h3>
+                    <ul>
+                        <li>9.999€</li>
+                    </ul>
                 </div>
                 <div>
+                    <h3>Mau Estado</h3>
+                    <ul>
+                        <li>9.999€</li>
+                    </ul>
                 </div>
             </div>
         </div>
