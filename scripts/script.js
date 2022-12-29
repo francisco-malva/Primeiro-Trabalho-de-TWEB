@@ -44,9 +44,25 @@ class FinanceCalculator {
 
     #onSubmitFinanceForm(event) {
         let data = new FormData(event.target);
+        let price = this.#calculatePrice(data);
 
         alert(this.#calculatePrice(data, 0.0));
 
+        this.financeResults.style.display = "flex";
+
+
+        const c3s = [
+            1.1,
+            1,
+            0.6
+        ];
+
+        console.log(this.financeResults.children);
+
+        this.financeResults.children.forEach((element, i) => {
+            element.querySelector("ul li:first-child").text = price * c3s[i];
+        });
+        
         return false;
     }
 
@@ -56,6 +72,7 @@ class FinanceCalculator {
         this.modelSelectorSpan = calculatorRoot.querySelector(".model-select");
         this.modelSelector = this.modelSelectorSpan.querySelector("select");
         this.submitButton = calculatorRoot.querySelector("input[type=submit]");
+        this.financeResults = calculatorRoot.querySelector("#finance-results");
 
         this.makerSelector.onchange = this.#onChangeMaker.bind(this);
         this.form.onsubmit = this.#onSubmitFinanceForm.bind(this);

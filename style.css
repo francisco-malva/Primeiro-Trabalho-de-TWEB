@@ -379,7 +379,7 @@ div #compromises-info {
     margin-bottom: 10px;
 }
 
-.finance-results {
+#finance-results {
     display: none;
     flex-direction: row;
     align-items: center;
@@ -388,7 +388,7 @@ div #compromises-info {
     justify-content: space-evenly;
 }
 
-.finance-results ul {
+#finance-results ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -396,7 +396,7 @@ div #compromises-info {
     align-items: center;
 }
 
-.finance-results ul :first-child {
+#finance-results ul :first-child {
     font-size: large;
     font-weight: bold;
 }
