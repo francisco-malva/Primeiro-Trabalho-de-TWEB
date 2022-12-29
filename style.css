@@ -206,6 +206,46 @@ div #compromises-info {
     height: 32px;
 }
 
+.banner {
+
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+    height: auto;
+    width: auto;
+}
+
+#banner1{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-bottom {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #13d0ca;
+    padding: 10px;
+}
+
+#banner1 p{
+    position: absolute;
+    color: whitesmoke;
+}
 #discover-new {
     display: flex;
     flex-direction: column;
@@ -231,6 +271,8 @@ div #compromises-info {
 
 #discover-new ul li {
     width: 33.333333%;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -245,22 +287,17 @@ div #compromises-info {
     text-decoration: underline;
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     padding: 0;
+    width: 100%;
 }
 
 #discover-new .discover-column .content ul li {
-    text-decoration: underline;
-    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-}
-
-#discover-new .discover-column li p {
-    text-align: justify;
-    font-weight: bold;
-    text-decoration: none;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: underline;
+    color: #fff;
 }
 
 .icon {
@@ -281,7 +318,7 @@ div #compromises-info {
     background-color: #101820;
 }
 
-#footer-last ul {
+/*#footer-last ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -289,9 +326,21 @@ div #compromises-info {
     padding: 0;
     justify-content: space-evenly;
     flex-grow: 1;
+}*/
+#footer-last ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #fff;
+    justify-content: center;
+    text-align: left;
 }
 
 #footer-last ul li {
+    width: 33.333333%;
+    justify-content: space-between;
+    align-items: left;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -301,8 +350,15 @@ div #compromises-info {
 #footer-last .brands {
     display: flex;
     flex-direction: column;
-    align-content: space-around;
+    justify-content: left;
     font-weight: bold;
+}
+
+#footer-last .last_line li {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-evenly;
 }
 
 #finance-calculator {
