@@ -215,37 +215,48 @@ div #compromises-info {
     width: auto;
 }
 
-#banner1{
+.banner1{
+    display: flex;
     position: relative;
     text-align: center;
     color: white;
     font-weight: bolder;
-    font-size: large;
+    font-size: 1.5em;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
+
+.banner1 p {
+    display: contents;
+    font-size: .8em;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.banner1 img {
+    max-width: 100%;
+    width: auto;
+}
+
 .centered {
     position: absolute;
-    top: 65%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -5%);
 }
 
 .centered-bottom {
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -5%);
     background-color: #13d0ca;
     padding: 10px;
+    font-size: smaller;
 }
 
-#banner1 p{
-    position: absolute;
-    color: whitesmoke;
-}
 #discover-new {
     display: flex;
     flex-direction: column;
