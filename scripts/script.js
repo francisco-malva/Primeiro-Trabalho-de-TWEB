@@ -98,13 +98,13 @@ class SaleCalculator {
     }
 }
 
-class FinanceCalculator{
+class FinanceCalculator {
 
-    static #getSpread(){
+    static #getSpread() {
         return 1 + (Math.random() * 4);
     }
 
-    #onSubmitFinanceForm(event){
+    #onSubmitFinanceForm(event) {
         try {
             let data = new FormData(event.target);
             let deposit = Number.parseInt(data.get("price"));
@@ -123,7 +123,7 @@ class FinanceCalculator{
             for (let div of this.financeResults.children) {
 
                 if (div.classList[0] != "vertical-line") {
-                    
+
 
                     let totalLi = div.querySelector(".tot-amt");
                     let emprLi = div.querySelector(".len-amt");
@@ -138,7 +138,7 @@ class FinanceCalculator{
 
                     let monthly = (financed / months) * (1 + (tax / 100));
 
-                
+
                     totalLi.innerHTML = "Preço do Automóvel: " + total + " €";
                     durLi.innerHTML = "Duração: " + months + " meses";
                     taxLi.innerHTML = "Taxa: " + tax.toFixed(2) + "%";
@@ -157,7 +157,7 @@ class FinanceCalculator{
         }
     }
 
-    constructor(financeRoot){
+    constructor(financeRoot) {
         this.form = financeRoot.querySelector("form");
         this.financeResults = financeRoot.querySelector(".results");
         this.form.onsubmit = this.#onSubmitFinanceForm.bind(this);
