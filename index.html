@@ -56,8 +56,8 @@
             </div>
     </header>
     <main>
-        <div id="finance-calculator">
-            <h2>Calculadora de Financiamento</h2>
+        <div class="calculator" id="sale">
+            <h2>Preço de Venda</h2>
             <form>
                 <label for="maker">Marca</label>
                 <select title="Marca" name="maker" value="" required>
@@ -78,19 +78,21 @@
                 <input name="date" title="Ano de Matrícula" type="number" placeholder="1900" min="1900" max="9999"
                     step="1" required>
                 <label for="price">Preço de Venda</label>
-                <div class="price-input"><input name="price" title="Preço" type="number" placeholder="1000,00"
-                        min="1000" max="9999" step="0.01" required> €</div>
+                <div class="price-input"><input name="price" title="Preço" type="number" placeholder="1000,00" min="500"
+                        max="9999999" step="1" required> €</div>
                 <label for="kms">Quilometragem</label>
                 <div class="km-input"><input name="kms" title="Quilometragem" type="number" placeholder="1000" min="0"
-                        max="999999" step="1" required> km</div>
+                        max="9999999" step="1" required> km</div>
                 <input type="submit" value="Calcular">
             </form>
-            <div id="finance-results">
+            <div class="results">
                 <div>
                     <h3>Como Novo</h3>
                     <ul>
                         <li>9.999€</li>
                     </ul>
+                </div>
+                <div class="vertical-line">
                 </div>
                 <div>
                     <h3>Bom Estado</h3>
@@ -98,10 +100,64 @@
                         <li>9.999€</li>
                     </ul>
                 </div>
+                <div class="vertical-line"></div>
                 <div>
                     <h3>Mau Estado</h3>
                     <ul>
                         <li>9.999€</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="calculator" id="finance">
+            <h2>Financiamento</h2>
+            <form>
+                <label for="price">Preço de Compra</label>
+                <div class="price-input"><input name="price" title="Preço" type="number" placeholder="500" min="500"
+                        max="9999999" step="1" required> €
+                </div>
+                <label for="years">Anos de Financiamento</label>
+                <input name="years" title="Anos" type="number" placeholder="1" min="1" max="99" step="1" required>
+                <input type="submit" value="Calcular">
+            </form>
+            <div class="results">
+                <div>
+                    <h3>1.º Caso</h3>
+                    <ul>
+                        <li class="tot-amt"></li>
+                        <li class="len-amt"></li>
+                        <li class="dur-amt"></li>
+                        <li class="tax-amt"></li>
+                        <li class="spd-amt"></li>
+                        <li class="ini-amt"></li>
+                        <li class="mon-amt"></li>
+                    </ul>
+                </div>
+                <div class="vertical-line">
+                </div>
+                <div>
+                    <h3>2.º Caso</h3>
+                    <ul>
+                        <li class="tot-amt"></li>
+                        <li class="len-amt"></li>
+                        <li class="dur-amt"></li>
+                        <li class="tax-amt"></li>
+                        <li class="spd-amt"></li>
+                        <li class="ini-amt"></li>
+                        <li class="mon-amt"></li>
+                    </ul>
+                </div>
+                <div class="vertical-line"></div>
+                <div>
+                    <h3>3.º Caso</h3>
+                    <ul>
+                        <li class="tot-amt"></li>
+                        <li class="len-amt"></li>
+                        <li class="dur-amt"></li>
+                        <li class="tax-amt"></li>
+                        <li class="spd-amt"></li>
+                        <li class="ini-amt"></li>
+                        <li class="mon-amt"></li>
                     </ul>
                 </div>
             </div>
@@ -173,10 +229,11 @@
             <img src="imgs/SUV1_banner_pre-footer1.jpeg" class="banner">
             <div class="centered">O SEU SUV USADO
                 <br><br>
-            COMO ESCOLHER BEM O SEU SUV USADO</div>
+                COMO ESCOLHER BEM O SEU SUV USADO
+            </div>
             <div class="centered-bottom" id="button1">LEIA MAIS</div>
         </div>
-        
+
         <div id="banner1">
             <img src="imgs/Occ_banner_pre-footer2.jpeg" class="banner">
         </div>

@@ -208,14 +208,14 @@ div #compromises-info {
 
 .banner {
 
-    display: block;  
-    margin-left: auto;  
-    margin-right: auto;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     width: auto;
 }
 
-#banner1{
+#banner1 {
     position: relative;
     text-align: center;
     color: white;
@@ -242,10 +242,11 @@ div #compromises-info {
     padding: 10px;
 }
 
-#banner1 p{
+#banner1 p {
     position: absolute;
     color: whitesmoke;
 }
+
 #discover-new {
     display: flex;
     flex-direction: column;
@@ -287,7 +288,7 @@ div #compromises-info {
     text-decoration: underline;
     list-style-type: none;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     padding: 0;
     width: 100%;
 }
@@ -361,25 +362,45 @@ div #compromises-info {
     justify-content: space-evenly;
 }
 
-#finance-calculator {
+.calculator {
     padding: 10px;
 }
 
-#finance-calculator label {
-    margin-top: 10px;
+.calculator h2 {
+    text-align: center;
+    font-size: 26.8px;
 }
 
-#finance-calculator input {
+.calculator form label {
+    color: #13d0ca;
+    font-size: 1.2em;
+    margin: 10px 0px 10px 0px;
+}
+
+.calculator select {
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.calculator input {
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#finance-calculator select {
+.calculator select {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#finance-results {
+.results {
     display: none;
     flex-direction: row;
     align-items: center;
@@ -388,7 +409,7 @@ div #compromises-info {
     justify-content: space-evenly;
 }
 
-#finance-results ul {
+.results ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -396,7 +417,7 @@ div #compromises-info {
     align-items: center;
 }
 
-#finance-results ul :first-child {
+.results ul :first-child {
     font-size: large;
     font-weight: bold;
 }
@@ -411,6 +432,11 @@ div #compromises-info {
 
 .km-input input {
     display: inline !important;
+}
+
+.vertical-line {
+    border-left: 1px solid lightgray;
+    height: 15em;
 }
 
 @media all and (max-width: 1200px) {
