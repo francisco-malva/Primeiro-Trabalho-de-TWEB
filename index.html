@@ -112,8 +112,12 @@
         <div class="calculator" id="finance">
             <h2>Financiamento</h2>
             <form>
-                <label for="price">Preço de Compra</label>
+                <label for="price">Depósito Inicial</label>
                 <div class="price-input"><input name="price" title="Preço" type="number" placeholder="500" min="500"
+                        max="9999999" step="1" required> €
+                </div>
+                <label for="price-finance">Financiamento Necessário</label>
+                <div class="price-input"><input name="price-finance" title="Preço" type="number" placeholder="500" min="500"
                         max="9999999" step="1" required> €
                 </div>
                 <label for="years">Anos de Financiamento</label>

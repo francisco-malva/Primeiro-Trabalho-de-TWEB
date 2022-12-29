@@ -50,7 +50,7 @@ class SaleCalculator {
         return price * (1 - c1) * c2;
     }
 
-    #onSubmitFinanceForm(event) {
+    #onSubmitSaleForm(event) {
 
         try {
             let data = new FormData(event.target);
@@ -94,7 +94,7 @@ class SaleCalculator {
         this.financeResults = calculatorRoot.querySelector(".results");
 
         this.makerSelector.onchange = this.#onChangeMaker.bind(this);
-        this.form.onsubmit = this.#onSubmitFinanceForm.bind(this);
+        this.form.onsubmit = this.#onSubmitSaleForm.bind(this);
     }
 }
 
@@ -107,31 +107,44 @@ class FinanceCalculator{
     #onSubmitFinanceForm(event){
         try {
             let data = new FormData(event.target);
-            let price = Number.parseInt(data.get("price"));
+            let deposit = Number.parseInt(data.get("price"));
+            let financed = Number.parseInt(data.get("price-finance"));
             let years = Number.parseInt(data.get("years"));
+
+            let total = deposit + financed;
 
             this.financeResults.style.display = "flex";
 
             let i = 0;
 
+
+            let months = years * 12;
+
             for (let div of this.financeResults.children) {
 
                 if (div.classList[0] != "vertical-line") {
                     
+
                     let totalLi = div.querySelector(".tot-amt");
                     let emprLi = div.querySelector(".len-amt");
                     let durLi = div.querySelector(".dur-amt");
                     let taxLi = div.querySelector(".tax-amt");
                     let spreadLi = div.querySelector(".spd-amt");
-                    let initLi = div.querySelector("ini-amt");
+                    let initLi = div.querySelector(".ini-amt");
                     let monLi = div.querySelector(".mon-amt");
 
                     let spread = FinanceCalculator.#getSpread();
                     let tax = 5 + spread;
 
-                    durLi.innerHTML = "Duração: " + years * 12 + " meses";
+                    let monthly = (financed / months) * (1 + (tax / 100));
+
+                
+                    totalLi.innerHTML = "Preço do Automóvel: " + total + " €";
+                    durLi.innerHTML = "Duração: " + months + " meses";
                     taxLi.innerHTML = "Taxa: " + tax.toFixed(2) + "%";
                     spreadLi.innerHTML = "Spread: " + spread.toFixed(2) + "%";
+                    initLi.innerHTML = "Valor do Depósito: " + deposit + " €";
+                    monLi.innerHTML = "Pagamento Mensal: " + monthly.toFixed(2) + " €";
                     ++i;
                 }
             }
