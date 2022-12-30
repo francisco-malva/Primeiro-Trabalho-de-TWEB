@@ -46,9 +46,12 @@
     text-align: center;
 }
 
+/*
 #linha4 {
     grid-row: 2 / 3;
+    display: grid;
 }
+*/
 
 #li4col1 {
     grid-column: 1 /2;
