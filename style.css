@@ -4,7 +4,7 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 0%;
     font-family: 'spoticar', Arial, sans-serif;
     font-size: 14px;
 }
@@ -75,6 +75,65 @@ nav ul li {
 .nav-separator {
     padding-right: 0px;
 }
+
+/*.carrossel {
+    margin: 0;
+    padding: 0;
+}
+
+.slides-list {
+    display: inline-block;
+    height: 430px;
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.slides-list li{
+    list-style-type: none;
+    position: absolute;
+}
+
+.slides-list img {
+    margin: auto;
+    height: auto;
+    width: 100%;
+}
+
+.slides-list input{
+    display: none;
+}
+
+.slides-list li label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 10px;
+}
+
+.slides-list li:nth-child(1){
+    left: 100%;
+}
+
+.slides-list li:nth-child(2){
+    left: 200%;
+}
+
+.slides-list li:nth-child(3){
+    left: 300%;
+}
+
+.slides-list img{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+}*/
 
 #interim-info {
     text-align: center;
@@ -206,7 +265,7 @@ div #compromises-info {
     height: 32px;
 }
 
-.banner {
+.banner1 .banner {
 
     display: block;
     margin-left: auto;
@@ -217,7 +276,6 @@ div #compromises-info {
 
 .banner1{
     display: flex;
-#banner1 {
     position: relative;
     text-align: center;
     color: white;
@@ -228,7 +286,6 @@ div #compromises-info {
     overflow: hidden;
 }
 
-
 .banner1 p {
     display: contents;
     font-size: .8em;
@@ -237,25 +294,27 @@ div #compromises-info {
 }
 
 .banner1 img {
-    max-width: 100%;
-    width: auto;
+    position: relative;
+    max-width: 120%;
 }
 
 .centered {
+    font-size: 100%;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -5%);
 }
 
 .centered-bottom {
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     left: 50%;
     transform: translate(-50%, -5%);
     background-color: #13d0ca;
-    padding: 10px;
-    font-size: smaller;
+    padding: 5px;
+    font-size: .5em;
+    font-weight: lighter;
 }
 
 #banner1 p {
