@@ -138,6 +138,65 @@ nav ul li {
     visibility: visible;
 }*/
 
+#search ul {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0px;
+    align-content: space-around;
+}
+
+#search ul li {
+    list-style-type: none;
+}
+
+#search-index {
+    background-color: lightgrey;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: .4em;
+}
+
+#search-index li {
+    flex: content;
+    list-style-type: none;
+    margin: 0px 5px;
+    padding: 1.5em;
+    background-color: aliceblue;
+    font-size: .6rem;
+    font-weight: bold;
+}
+
+#search-index li:hover {
+    cursor: pointer;
+}
+
+#search-index li:nth-last-child(2){
+    background-color: #13d0ca;
+    border-radius: .9em;
+    color: white;
+}
+
+#search-index li:last-child{
+    margin: 0px 0px;
+    background-color: white;
+    border-radius: .9em;
+    color: black;
+    border-radius: 0;
+    text-align: right;
+}
+
+#search-index li:nth-last-child(2):hover {
+    background-color: white;
+    border: #13d0ca 3px solid;
+    color: #13d0ca;
+}
+
+#search-mediaq {
+    display: none;
+}
+
 #interim-info {
     text-align: center;
 }
@@ -332,6 +391,11 @@ div #compromises-info {
     background-color: #767171;
     padding: 3em;
 }
+
+#discover-new li:hover{
+    cursor: pointer;
+}
+
 #discover-new li{
     list-style-type: none;
 }
@@ -365,6 +429,10 @@ div #compromises-info {
     grid-template-rows: 2;
     background-color: #767171;
     padding: 3em;
+}
+
+#discover-new2 li:hover{
+    cursor: pointer;
 }
 
 #discover-new2 li{
@@ -444,6 +512,11 @@ div #compromises-info {
 
 #footer-last li {
     list-style-type: none;
+}
+
+#footer-last li:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 #li5col1{
@@ -609,7 +682,7 @@ div #compromises-info {
     height: 15em;
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 991px) {
     #normal-nav {
         display: none;
     }
@@ -623,4 +696,91 @@ div #compromises-info {
         flex-grow: 1;
         overflow: wrap;
     }
+
+    #search {
+        display: none;
+    }
+
+    #search-mediaq {
+        display: grid;
+    }
+
+    #search-mediaq li {
+        list-style-type: none;
+        padding: 1em;
+        margin: 5px;
+        font-size: smaller;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #search-mediaq li:first-child {
+        padding: 0px;
+    }
+
+    #search-mediaq li:nth-child(2), #search-mediaq li:nth-child(3) {
+        background-color: #13d0ca;
+        color: white;
+        border-radius: 9px;
+        border: #13d0ca 3px solid;
+    }
+
+    #search-mediaq li:nth-child(2):hover, #search-mediaq li:nth-child(3):hover {
+        background-color: white;
+        color: #13d0ca;
+        cursor: pointer;
+    }
+
+    #search-mediaq li:nth-child(3) {
+        font-size: large;
+    }
+
+    #search-mediaq li:last-child {
+        color: gray;
+        border-radius: 9px;
+        border: gray 3px solid;
+    }
+
+    #discover-new {
+        display: block;
+        padding-inline-start: 60px;
+    }
+
+    #discover-new2{
+        display: block;
+        padding-inline-start: 60px;
+    }
+
+    #footer-last {
+        display: block;
+        padding-inline-start: 0px;
+    }
+
+    #li5col1 {
+        padding-inline-start: 100px;
+    }
+
+    #li6col1 li, #li6col2 li, #li6col3 li, #li6col4 li, #li6col5 li, #li6col6 li, #li7col1 li, #li7col2 li, #li7col3 li, #li7col4 li, #li7col5 li, #li7col6 li {
+        display: none;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    #li6col1 li:first-child, #li6col2 li:first-child, #li6col3 li:first-child, #li6col4 li:first-child, #li6col5 li:first-child, #li6col6 li:first-child, #li7col1 li:first-child, #li7col2 li:first-child, #li7col3 li:first-child, #li7col4 li:first-child, #li7col5 li:first-child, #li7col6 li:first-child {
+        display: block;
+        padding-bottom: 1em;
+        border-bottom: white .2em solid;
+    }
+
+    #footer-footer {
+        display: block;
+    }
+
+    #footer-footer li {
+        padding-left: 60px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    
 }
