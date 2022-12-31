@@ -29,11 +29,17 @@ header {
     display: flex;
     flex-direction: row;
     align-content: center;
+    font-size: 12px;
 }
 
 #brand-banner {
-    width: 100%;
-    height: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: 120px;
+}
+
+#brand-banner-media {
+    display: none;
 }
 
 #sandwich-nav {
@@ -210,7 +216,7 @@ nav ul li {
     line-height: 1.7;
 }
 
-#oficial-network {
+/*#oficial-network {
     background-image: linear-gradient(to right, rgb(217, 217, 217), rgb(76, 75, 75));
 }
 
@@ -234,7 +240,9 @@ nav ul li {
     width: auto;
     height: 64px;
 
-}
+}*/
+
+
 
 #compromises-info {
     background-color: #323e48;
@@ -247,13 +255,8 @@ nav ul li {
     padding-bottom: 20px;
 }
 
-div #compromises-info {
-    display: block;
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
-
 #compromises-info h2 {
+    text-align: center;
     color: #fff;
 }
 
@@ -270,6 +273,7 @@ div #compromises-info {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    font-size: .8em;
     font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
@@ -342,7 +346,7 @@ div #compromises-info {
     text-align: center;
     color: white;
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: .7em;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -350,14 +354,14 @@ div #compromises-info {
 
 .banner1 p {
     display: contents;
-    font-size: .8em;
+    font-size: 1.8em;
     position: relative;
     flex-wrap: nowrap;
 }
 
 .banner1 img {
     position: relative;
-    max-width: 120%;
+    max-width: 150%;
 }
 
 .centered {
@@ -375,7 +379,7 @@ div #compromises-info {
     transform: translate(-50%, -5%);
     background-color: #13d0ca;
     padding: 5px;
-    font-size: .5em;
+    font-size: 1.5em;
     font-weight: lighter;
 }
 
@@ -405,7 +409,7 @@ div #compromises-info {
     grid-column: 1 / 4;
     text-align: center;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #li2col1 {
@@ -605,8 +609,16 @@ div #compromises-info {
     margin: 50px 100px 50px 100px;
 }
 
+#extra-finance {
+    display: flex;
+    justify-content: space-evenly;
+}
 .calculator {
-    padding: 10px;
+    background-color: aliceblue;
+    margin: 30px;
+    padding: 40px 100px;
+    border: #13d0ca 2px solid;
+    border-radius: 10px;
 }
 
 .calculator h2 {
@@ -649,7 +661,7 @@ div #compromises-info {
     align-items: center;
     margin: 0;
     flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .results ul {
@@ -705,6 +717,10 @@ div #compromises-info {
         display: grid;
     }
 
+    #search-mediaq ul {
+        padding-inline-start: 0px;
+    }
+
     #search-mediaq li {
         list-style-type: none;
         padding: 1em;
@@ -732,23 +748,50 @@ div #compromises-info {
     }
 
     #search-mediaq li:nth-child(3) {
-        font-size: large;
+        font-size: small;
     }
 
-    #search-mediaq li:last-child {
+    #search-mediaq ul li:last-child {
         color: gray;
         border-radius: 9px;
         border: gray 3px solid;
+        margin-inline-start: 200px;
+        margin-inline-end: 200px;
+        padding: 2em 2em ;
+    }
+
+    #search-mediaq ul li:last-child:hover {
+        cursor: pointer;
+        color: darkblue;
+        text-decoration: underline;
+    }
+
+    #brand-banner {
+        display: none;
+    }
+
+    #brand-banner-media {
+        display: block;
+        width: 100%;
+        height: 120px;
+    }
+    
+    #compromises-info ul li {
+        font-size: .6em;
+    }
+
+    #compromises-info #phrase {
+        font-size: .6em;
     }
 
     #discover-new {
         display: block;
-        padding-inline-start: 60px;
+        padding-inline-start: 30px;
     }
 
     #discover-new2{
         display: block;
-        padding-inline-start: 60px;
+        padding-inline-start: 30px;
     }
 
     #footer-last {
@@ -757,12 +800,12 @@ div #compromises-info {
     }
 
     #li5col1 {
-        padding-inline-start: 100px;
+        padding-inline-start: 70px;
     }
 
     #li6col1 li, #li6col2 li, #li6col3 li, #li6col4 li, #li6col5 li, #li6col6 li, #li7col1 li, #li7col2 li, #li7col3 li, #li7col4 li, #li7col5 li, #li7col6 li {
         display: none;
-        margin-left: 60px;
+        margin-left: 30px;
         margin-right: 60px;
     }
 
@@ -777,7 +820,7 @@ div #compromises-info {
     }
 
     #footer-footer li {
-        padding-left: 60px;
+        padding-left: 30px;
         padding-top: 1em;
         padding-bottom: 1em;
     }
