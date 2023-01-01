@@ -87,7 +87,7 @@ nav ul li {
     padding-right: 0px;
 }
 
-/*.carrossel {
+.carrossel {
     margin: 0;
     padding: 0;
 }
@@ -124,7 +124,7 @@ nav ul li {
     width: 10px;
 }
 
-.slides-list li:nth-child(1){
+/*.slides-list li:nth-child(1){
     left: 100%;
 }
 
@@ -229,34 +229,6 @@ nav ul li {
     background-color: #13d0ca;
     cursor: pointer;
 }
-
-/*#oficial-network {
-    background-image: linear-gradient(to right, rgb(217, 217, 217), rgb(76, 75, 75));
-}
-
-#oficial-network ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#oficial-network ul li {
-    padding: 00.7rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #f7f7f7;
-
-}
-
-#oficial-network ul li img {
-    width: auto;
-    height: 64px;
-
-}*/
-
-
 
 #compromises-info {
     background-color: #323e48;
@@ -428,6 +400,7 @@ nav ul li {
 .cars {
     display: block;
     background-color: #f7f7f7;
+    margin-bottom: 20px;
 }
 
 #first-car,
@@ -1090,6 +1063,10 @@ nav ul li {
         padding-left: 30px;
         padding-top: 1em;
         padding-bottom: 1em;
+    }
+
+    .cars:nth-child(3) {
+        display: none;
     }
 }
 

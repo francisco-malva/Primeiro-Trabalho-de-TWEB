@@ -3,7 +3,8 @@
 class SaleCalculator {
 
     static #brandModels = {
-        "mercedes": [new Option("SUV", "suv")]
+        "mercedes": [new Option("SUV", "suv")],
+        "volvo": [new Option("V5", "v5")]
     };
 
     #onChangeMaker(event) {
