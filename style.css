@@ -88,15 +88,15 @@ nav ul li {
 }
 
 .carrossel {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .slides-list {
-    display: inline-block;
-    height: 430px;
-    width: 1200px;
-    margin: auto;
+    display: block;
+    height: auto;
+    width:100%;
+    margin: 10px 0px 10px 0px;
     position: relative;
 }
 
@@ -106,12 +106,14 @@ nav ul li {
 }
 
 .slides-list img {
-    margin: auto;
+    margin: 10px 0px 10px -40px;
     height: auto;
+    max-width: 100%;
     width: 100%;
+    vertical-align: top;
 }
 
-.slides-list input{
+.slides-list input {
     display: none;
 }
 
@@ -122,17 +124,18 @@ nav ul li {
     display: block;
     position: absolute;
     width: 10px;
+    z-index: 10;
 }
 
-/*.slides-list li:nth-child(1){
+.slides-list li:nth-child(1) label{
     left: 100%;
 }
 
-.slides-list li:nth-child(2){
+.slides-list li:nth-child(2) label{
     left: 200%;
 }
 
-.slides-list li:nth-child(3){
+.slides-list li:nth-child(3) label{
     left: 300%;
 }
 
@@ -144,7 +147,8 @@ nav ul li {
 .slide li input:checked ~ img {
     opacity: 1;
     visibility: visible;
-}*/
+    z-index: 10;
+}
 
 
 #search ul {
@@ -160,18 +164,15 @@ nav ul li {
 
 #search-index {
     background-color: lightgrey;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 0px 10px 10px 10px;
     padding: .4em;
 }
 
 #search-index li {
     flex: content;
     list-style-type: none;
-    margin: 0px 5px;
-    padding: 1.5em;
+    margin: 1.1em 1em;
+    padding: 2.2em;
     background-color: aliceblue;
     font-size: .6rem;
     font-weight: bold;
@@ -188,10 +189,11 @@ nav ul li {
 }
 
 #search-index li:last-child {
-    margin: 0px 0px;
-    background-color: white;
+    margin: 10px 0px;
+    padding: 20px 0px;
+    background-color: lightgray;
     border-radius: .9em;
-    color: black;
+    color:#13d0ca;
     border-radius: 0;
     text-align: right;
 }
@@ -264,11 +266,12 @@ nav ul li {
     font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0px 15px 0px 15px;
 }
 
 #compromises-info ul li img {
     width: auto;
-    height: 64px;
+    height: 74px;
     fill: #fff;
 }
 
@@ -528,15 +531,15 @@ nav ul li {
 
 #extra-finance {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .calculator {
-    background-color: aliceblue;
-    margin: 40px;
-    padding: 20px 100px;
+    background-color: rgb(233, 235, 238);
+    margin: 20px;
+    padding: 10px 20px;
     border: #13d0ca 2px solid;
     border-radius: 10px;
+    flex-direction: row;
 }
 
 .calculator h2 {
@@ -576,7 +579,6 @@ nav ul li {
 
 .results {
     display: none;
-    flex-direction: row;
     align-items: center;
     margin: 0;
     flex-grow: 1;
@@ -1101,5 +1103,9 @@ nav ul li {
     #pre-show li:nth-child(3),
     #pre-show li:nth-child(4) {
         display: none;
+    }
+
+    .calculator {
+        margin: 15px 0px 15px 0px;
     }
 }
