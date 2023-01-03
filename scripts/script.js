@@ -165,5 +165,63 @@ class FinanceCalculator {
     }
 }
 
+
+class Slideshow {
+
+    constructor(slideshowRoot) {
+        this.root = slideshowRoot;
+
+        this.slide = 0;
+
+        this.slides = slideshowRoot.querySelectorAll("img");
+        this.slideCount = this.slides.length;
+
+
+       
+       
+        this.#setCorrectHeight();
+
+        addEventListener("resize", this.#setCorrectHeight.bind(this));
+
+
+      
+        setTimeout(this.#nextSlide.bind(this), 5000);
+    }
+
+    #setCorrectHeight(){
+        let maxHeight = 0;
+        let mul = 0;
+
+        for (let slide of this.slides) {
+            slide.style.left = mul + "%";
+
+            if(slide.offsetHeight > maxHeight){
+                maxHeight = slide.offsetHeight;
+            }
+            mul += 100;
+        }
+
+        this.root.style.height = maxHeight + "px";
+    }
+    #nextSlide() {
+
+        ++this.slide;
+
+        if (this.slide >= this.slideCount)
+            this.slide = 0;
+
+        this.#setSlide(this.slide);
+
+        setTimeout(this.#nextSlide.bind(this), 5000);
+    }
+
+    #setSlide(i) {
+
+        console.log("Test");
+        this.root.style.transform = "translate(" + i * -100 + "%)";
+    }
+}
+
 const saleCalculator = new SaleCalculator(document.querySelector("#sale"));
-const financeCalculator = new FinanceCalculator(document.querySelector("#finance")); 
+const financeCalculator = new FinanceCalculator(document.querySelector("#finance"));
+const slideshow = new Slideshow(document.querySelector(".carrossel"));
