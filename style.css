@@ -273,13 +273,48 @@ nav ul li {
 .carrossel {
     position: relative;
     display: block;
+    margin-bottom: 1rem;
+}
+
+.carrossel div {
     transition: transform 1s;
 }
 
 .carrossel img {
     position: absolute;
     width: 100%;
+    z-index: 0;
     height: auto;
+}
+
+.car-btn-left,
+.car-btn-right {
+    position: absolute;
+    z-index: 1;
+    width: 3em;
+    height: 3em;
+    top: 45%;
+    background-color: #13d0ca7a;
+    color: #fff;
+    font-size: larger;
+    border-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.car-btn-left:hover,
+.car-btn-right:hover{
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+.car-btn-left {
+    text-align: 0%;
+}
+
+.car-btn-right {
+    right: 0%;
 }
 
 #phrase {

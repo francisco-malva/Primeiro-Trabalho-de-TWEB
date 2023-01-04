@@ -170,40 +170,59 @@ class Slideshow {
 
     constructor(slideshowRoot) {
         this.root = slideshowRoot;
+        this.containerDiv = slideshowRoot.querySelector("div");
 
         this.slide = 0;
 
-        this.slides = slideshowRoot.querySelectorAll("img");
+        this.slides = this.containerDiv.querySelectorAll("img");
         this.slideCount = this.slides.length;
 
 
-       
-       
+        this.root.querySelector(".car-btn-left").onclick = this.#previousSlide.bind(this);
+        this.root.querySelector(".car-btn-right").onclick = this.#nextSlide.bind(this);
+
         this.#setCorrectHeight();
 
         addEventListener("resize", this.#setCorrectHeight.bind(this));
 
+        this.seconds = 0;
+        setInterval(this.#updateSlideshow.bind(this), 1000);
 
-      
-        setTimeout(this.#nextSlide.bind(this), 5000);
+        this.#queueSlideChange();
     }
 
-    #setCorrectHeight(){
+    #updateSlideshow(){
+        this.seconds++;
+
+        if(this.seconds > 5 && this.seconds % 5 === 0){
+            this.#nextSlide();
+        }
+    }
+    #cancelSlideChange() {
+        clearTimeout(this.timeout);
+    }
+
+    #queueSlideChange() {
+        this.timeout = setTimeout(this.#nextSlide.bind(this, true), 5000);
+    }
+
+    #setCorrectHeight() {
         let maxHeight = 0;
         let mul = 0;
 
         for (let slide of this.slides) {
             slide.style.left = mul + "%";
 
-            if(slide.offsetHeight > maxHeight){
+            if (slide.offsetHeight > maxHeight) {
                 maxHeight = slide.offsetHeight;
             }
             mul += 100;
         }
 
-        this.root.style.height = maxHeight + "px";
+        this.containerDiv.style.height = maxHeight + "px";
     }
-    #nextSlide() {
+
+    #nextSlide(auto) {
 
         ++this.slide;
 
@@ -211,14 +230,21 @@ class Slideshow {
             this.slide = 0;
 
         this.#setSlide(this.slide);
+    }
 
-        setTimeout(this.#nextSlide.bind(this), 5000);
+    #previousSlide(auto) {
+
+        --this.slide;
+
+        if (this.slide < 0)
+            this.slide = this.slideCount - 1;
+
+        this.#setSlide(this.slide);
     }
 
     #setSlide(i) {
-
-        console.log("Test");
-        this.root.style.transform = "translate(" + i * -100 + "%)";
+        this.seconds = 0;
+        this.containerDiv.style.transform = "translate(" + i * -100 + "%)";
     }
 }
 
