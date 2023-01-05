@@ -191,10 +191,10 @@ class Slideshow {
         this.#queueSlideChange();
     }
 
-    #updateSlideshow(){
+    #updateSlideshow() {
         this.seconds++;
 
-        if(this.seconds > 5 && this.seconds % 5 === 0){
+        if (this.seconds > 5 && this.seconds % 5 === 0) {
             this.#nextSlide();
         }
     }

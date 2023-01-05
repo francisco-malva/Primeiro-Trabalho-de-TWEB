@@ -46,6 +46,7 @@ header {
 
 #sandwich-nav {
     display: none;
+    flex-wrap: nowrap;
 }
 
 .nav-display {
@@ -54,10 +55,11 @@ header {
 }
 
 .logo-container {
-    padding: 25px;
+    padding: 1.5%;
+    display: flex;
     width: 185px;
     height: auto;
-    align-self: flex-start;
+    align-self: center;
 }
 
 nav {
@@ -273,7 +275,10 @@ nav ul li {
 .carrossel {
     position: relative;
     display: block;
+    max-width: 100%;
     margin-bottom: 1rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .carrossel div {
@@ -303,7 +308,7 @@ nav ul li {
 }
 
 .car-btn-left:hover,
-.car-btn-right:hover{
+.car-btn-right:hover {
     border-width: 1px;
     border-color: white;
     border-style: solid;
@@ -943,9 +948,9 @@ nav ul li {
 }
 
 .icon {
-    transform: scale(1.5);
+    transform: scale(150%);
     color: gray;
-    margin: 50px 100px 50px 100px;
+    margin: 10% 10% 10% 10%;
 }
 
 .result-pane {
@@ -973,6 +978,8 @@ nav ul li {
 
     #search-mediaq {
         display: grid;
+        width: 100%;
+        height: auto;
     }
 
     #search-mediaq ul {
@@ -982,7 +989,9 @@ nav ul li {
     #search-mediaq li {
         list-style-type: none;
         padding: 1em;
-        margin: 5px;
+        margin: 5px 0px 5px 0px;
+        padding-left: 0%;
+        padding-right: 0%;
         font-size: smaller;
         font-weight: bold;
         text-align: center;
