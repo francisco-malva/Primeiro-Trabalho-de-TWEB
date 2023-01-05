@@ -22,14 +22,54 @@ h6 {
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
     font-size: 12px;
 }
 
+#normal-nav {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8vw;
+    white-space: nowrap;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+}
+
+
 #sandwich-nav {
-    display: none; 
+    width: 100%;
+}
+
+#sandwich-nav {
+    display: none;
+}
+
+#sandwich-nav ul,
+#sandwich ul * {
+    list-style-type: none;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active-sandwich,
+.active-sandwich * {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.menu-button {
+    background-color: white;
+    border-style: none;
+}
+
+.menu-button:hover {
+    color: black;
 }
 
 .nav-display {
@@ -43,11 +83,6 @@ header {
     width: 185px;
     height: auto;
     align-self: center;
-}
-
-nav {
-    align-content: center;
-    align-items: top;
 }
 
 nav ul {
@@ -67,7 +102,7 @@ nav ul li {
     border-bottom: white 3px solid;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     cursor: pointer;
     border-bottom: #13d0ca 3px solid;
 }
@@ -135,7 +170,7 @@ nav ul li:hover{
     font-size: 1.3em;
     top: 85%;
     left: 50%;
-    transform:translate(-50%, -85%)
+    transform: translate(-50%, -85%)
 }
 
 #text_img1 #_1 {
@@ -149,7 +184,8 @@ nav ul li:hover{
     padding: .5em 4em;
 }
 
-#text_img1 #_1:hover, #text_img1 #_2:hover {
+#text_img1 #_1:hover,
+#text_img1 #_2:hover {
     cursor: pointer;
 }
 
@@ -923,6 +959,7 @@ nav ul li:hover{
     transform: scale(150%);
     color: gray;
     margin: 10% 10% 10% 10%;
+    transition: color 1s;
 }
 
 @media all and (max-width: 1100px) {
@@ -932,6 +969,11 @@ nav ul li:hover{
 
     #sandwich-nav {
         display: flex;
+        flex-direction: column;
+    }
+
+    #sandwich-nav div {
+        display: flex;
         flex-direction: row;
         align-content: center;
         align-items: center;
@@ -939,6 +981,22 @@ nav ul li:hover{
         flex-grow: 1;
         overflow: wrap;
     }
+
+    #sandwich-nav li:hover {
+        background-color: white;
+        border-width: 0px 0px 1px 0px;
+        padding-bottom: 14px;
+        border-style: solid;
+        border-color: #13d0ca;
+    }
+
+
+    #sandwich-nav li {
+        background-color: rgb(230, 230, 230);
+        margin: 5px 0px 5px 0px;
+        padding: 15px 0px 15px 10px;
+    }
+
 
     #text_img1 {
         font-size: .9em;
@@ -1106,7 +1164,7 @@ nav ul li:hover{
         margin: 1em 1.3em;
     }
 
-    .cars:nth-child(3){
+    .cars:nth-child(3) {
         display: block;
     }
 
