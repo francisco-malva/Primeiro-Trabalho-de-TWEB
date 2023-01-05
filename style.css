@@ -12,10 +12,6 @@ body {
     line-height: 140%;
 }
 
-a:hover {
-    text-decoration-color: #13d0ca;
-}
-
 h1,
 h2,
 h3,
@@ -56,7 +52,7 @@ nav {
 
 nav ul {
     padding: 0%;
-    margin: 0%;
+    margin: .5%;
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -66,7 +62,14 @@ nav ul {
 }
 
 nav ul li {
-    padding: 32px 10px 32px 10px;
+    padding: 32px 5px 32px 5px;
+    font-size: .9em;
+    border-bottom: white 3px solid;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    border-bottom: #13d0ca 3px solid;
 }
 
 .nav-separator {
@@ -140,6 +143,10 @@ nav ul li {
     padding: .5em 4em;
 }
 
+#text_img1 #_1:hover, #text_img1 #_2:hover {
+    cursor: pointer;
+}
+
 #text_img1 #_2 {
     background-color: white;
     color: black;
@@ -211,6 +218,7 @@ nav ul li {
 
 #interim-info {
     text-align: center;
+    margin: 4em;
 }
 
 #interim-info h2 {
@@ -239,8 +247,7 @@ nav ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding: 4em 2em
 }
 
 #compromises-info h2 {
@@ -294,7 +301,9 @@ nav ul li {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    text-align: center;
     background-color: #f7f7f7;
+    padding: 4em;
 }
 
 #opportunities-info ul {
@@ -535,7 +544,8 @@ nav ul li {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #bec9d1;
-    margin: 10px;
+    margin: 1em;
+    margin-bottom: 2em;
     border-radius: 10px;
 }
 
@@ -908,7 +918,7 @@ nav ul li {
     transform: scale(150%);
     color: gray;
     margin: 10% 10% 10% 10%;
-} /**//**//**/
+}
 
 @media all and (max-width: 1100px) {
     #normal-nav {
