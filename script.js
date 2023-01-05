@@ -277,3 +277,11 @@ class Slideshow {
 const saleCalculator = new SaleCalculator(document.querySelector("#sale"));
 const financeCalculator = new FinanceCalculator(document.querySelector("#finance"));
 const slideshow = new Slideshow(document.querySelector(".carrossel"));
+
+function opening() {
+    var openList = $('[data-target="#open-menu-querie"]');
+
+    if (openList.text() === "Show More") {
+       openList.click();
+    }
+}
