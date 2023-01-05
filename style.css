@@ -925,6 +925,16 @@ nav ul li:hover{
     margin: 10% 10% 10% 10%;
 }
 
+#chat {
+    position: fixed;
+    right: 2%;
+    bottom: 3.5%;
+    width: 3%;
+    padding: .7em 1em .5em 1em;
+    border-radius: 20%;
+    background-color: #13d0ca;
+}
+
 @media all and (max-width: 1100px) {
     #normal-nav {
         display: none;
