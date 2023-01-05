@@ -143,14 +143,14 @@ nav ul li:hover{
     padding: .5em 4em;
 }
 
-#text_img1 #_1:hover, #text_img1 #_2:hover {
-    cursor: pointer;
-}
-
 #text_img1 #_2 {
     background-color: white;
     color: black;
     padding: .5em 4em;
+}
+
+#text_img1 #_1:hover, #text_img1 #_2:hover {
+    cursor: pointer;
 }
 
 #search #search-index {
@@ -253,6 +253,11 @@ nav ul li:hover{
 #compromises-info h2 {
     text-align: center;
     color: #fff;
+}
+
+#compromises-info h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #compromises-info ul {

@@ -4,7 +4,33 @@ class SaleCalculator {
 
     static #brandModels = {
         "mercedes": [new Option("SUV", "suv")],
-        "volvo": [new Option("V5", "v5")]
+        "mercedes": [new Option("SEDAN", "sedan")],
+        "mercedes": [new Option("CROSSOVER", "crossover")],
+        "mercedes": [new Option("PICAPE", "picape")],
+        "mercedes": [new Option("CUPÊ", "cupe")],
+        "volvo": [new Option("C40", "c40")],
+        "volvo": [new Option("EX90", "ex90")],
+        "volvo": [new Option("V60", "v60")],
+        "volvo": [new Option("V90", "v90")],
+        "saab": [new Option("92 LINE", "95line")],
+        "saab": [new Option("EV-1", "ev-1")],
+        "saab": [new Option("VIKING", "viking")],
+        "saab": [new Option("9000 CABRIOLET", "9000cabriolet")],
+        "audi": [new Option("A3 SEDAN", "a3 sedan")],
+        "audi": [new Option("A4 WAGON", "a4 wagon")],
+        "audi": [new Option("A5 COUPE", "a5 coupe")],
+        "audi": [new Option("A5 SPORTBACK", "a5 sportback")],
+        "audi": [new Option("Q3 SUV", "q3 suv")],
+        "audi": [new Option("Q4 SUV SPORTBACK", "q4 suv sportback")],
+        "bmw": [new Option("X3", "x3")],
+        "bmw": [new Option("X5", "x5")],
+        "bmw": [new Option("X6", "x6")],
+        "bmw": [new Option("iX3", "ix3")],
+        "bmw": [new Option("iX M60", "ix m60")],
+        "bmw": [new Option("iX1", "ix1")],
+        "wv": [new Option("GOLF 4 TDi", "x3")],
+        "wv": [new Option("GOLF 5 TDi", "x5")],
+        "wv": [new Option("PASSAT TDi", "x6")],
     };
 
     #onChangeMaker(event) {
