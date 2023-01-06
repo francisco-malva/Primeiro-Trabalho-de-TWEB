@@ -1019,14 +1019,6 @@ nav ul li:hover {
     #search-mediaq {
         display: flex;
         flex-direction: column;
-    }
-
-    #search-mediaq ul {
-        padding-inline-start: 0px;
-    }
-
-    #search-mediaq li {
-        list-style-type: none;
         padding: 1em;
         margin: .8em 0em .8em 0em;
         font-size: smaller;
@@ -1034,59 +1026,85 @@ nav ul li:hover {
         text-align: center;
     }
 
-    #search-mediaq li:first-child {
-        padding: 0px;
-    }
-
-    #search-mediaq li:nth-child(2),
-    #search-mediaq li:nth-child(3) {
+    #search-mediaq button{
+        width: 100%;
         background-color: #13d0ca;
         color: white;
         border-radius: 9px;
         border: #13d0ca 3px solid;
+        padding: 1.2em;
+        font-size: larger;
     }
 
-    #search-mediaq li:nth-child(2):hover,
-    #search-mediaq li:nth-child(3):hover {
-        background-color: white;
-        color: #13d0ca;
-        cursor: pointer;
+    #search-mediaq ul
+
+    
+
+    /*
+    #search-mediaq:nth-child(2),
+    #search-mediaq:nth-child(3) {
+       
     }
 
-    #search-mediaq li:nth-child(3) {
+    #search-mediaq:nth-child(3) {
         font-size: small;
     }
 
-    #search-mediaq ul li:last-child {
+    #search-mediaq:last-child {
         color: gray;
         border-radius: 9px;
         border: #7c868d 3px solid;
         padding: 2em 3em;
     }
 
-    #search-mediaq ul li:last-child:hover {
+    #search-mediaq:last-child:hover {
         cursor: pointer;
         color: darkblue;
         text-decoration: underline;
     }
 
+    #search-mediaq button {
+        background-color: #13d0ca;
+        border: none;
+        border-radius: .2em;
+        padding: .2em;
+        color: white;
+        font-weight: bold;
+        font-size: small;
+    }
+
+    #search-mediaq button:hover {
+        cursor: pointer;
+    }
+
     #search-sandwich li {
-        display: none;
+        display: block;
+        text-align: left;
+        font-size: smaller;
+        border: none;
+    }
+
+    #search-sandwich li:nth-child(2):hover,
+    #search-sandwich li:nth-child(3):hover {
+        border: none;
+        background-color: none;
     }
 
     #search-sandwich ul,
-    #sandwich ul * {
-    list-style-type: none;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
+    #search-sandwich ul * {
+        text-align: left;
+        list-style-type: none;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    */
 
     .active-sandwich,
     .active-sandwich * {
-    display: block !important;
-    opacity: 1 !important;
-}
+        display: block !important;
+        opacity: 1 !important;
+    }
 
     #brand-banner {
         display: none;
