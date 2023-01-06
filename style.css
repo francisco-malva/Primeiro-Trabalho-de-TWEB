@@ -936,6 +936,27 @@ nav ul li:hover {
     border: white 1px solid;
 }
 
+#li6col1 button,
+    #li6col2 button,
+    #li6col3 button,
+    #li6col4 button,
+    #li6col5 button,
+    #li6col6 button,
+    #li7col1 button,
+    #li7col2 button,
+    #li7col3 button,
+    #li7col4 button,
+    #li7col5 button,
+    #li7col6 button {
+        border-style: none;
+        background-color: #101820;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        padding-inline-start: 0px;
+        margin-bottom: 1em;
+    }
+
 #footer-footer {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
@@ -1127,6 +1148,8 @@ nav ul li:hover {
         display: none;
         margin-left: 30px;
         margin-right: 60px;
+        padding-top: .3em;
+        font-size: normal;
     }
 
     #li6col1 li:first-child,
@@ -1142,8 +1165,45 @@ nav ul li:hover {
     #li7col5 li:first-child,
     #li7col6 li:first-child {
         display: block;
-        padding-bottom: 1em;
         border-bottom: white .2em solid;
+    }
+
+    #li6col1 button,
+    #li6col2 button,
+    #li6col3 button,
+    #li6col4 button,
+    #li6col5 button,
+    #li6col6 button,
+    #li7col1 button,
+    #li7col2 button,
+    #li7col3 button,
+    #li7col4 button,
+    #li7col5 button,
+    #li7col6 button {
+        width: 100%;
+        background-color: #101820;
+        color: white;
+        padding: 1em 0em .3em 0em ;
+        font-size: large;
+        margin: 0.25em 0 0.25em 0em;
+        border-style: none;
+        text-align: left;
+    }
+
+    #li6col1 button:hover,
+    #li6col2 button:hover,
+    #li6col3 button:hover,
+    #li6col4 button:hover,
+    #li6col5 button:hover,
+    #li6col6 button:hover,
+    #li7col1 button:hover,
+    #li7col2 button:hover,
+    #li7col3 button:hover,
+    #li7col4 button:hover,
+    #li7col5 button:hover,
+    #li7col6 button:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     #footer-footer {

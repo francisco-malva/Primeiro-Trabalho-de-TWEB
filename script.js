@@ -276,8 +276,8 @@ class Menu {
         this.navList.classList.toggle("active-sandwich");
     }
 
-    constructor(root) {
-        this.navList = root.querySelector("ul");
+    constructor(root, alt) {
+        this.navList = alt ? root.querySelector("span") : root.querySelector("ul");
         root.querySelector("button").onclick = this.#toggleMenu.bind(this);
     }
 }
@@ -285,5 +285,17 @@ class Menu {
 const saleCalculator = new SaleCalculator(document.querySelector("#sale"));
 const financeCalculator = new FinanceCalculator(document.querySelector("#finance"));
 const slideshow = new Slideshow(document.querySelector(".carrossel"));
-const menu = new Menu(document.querySelector("#sandwich-nav"));
-const menu2 = new Menu(document.querySelector("#search-sandwich"));
+const menu = new Menu(document.querySelector("#sandwich-nav"), false);
+const menu2 = new Menu(document.querySelector("#search-sandwich"), false);
+const menu3 = new Menu(document.querySelector("#li6col1"), true);
+const menu4 = new Menu(document.querySelector("#li6col2"), true);
+const menu5 = new Menu(document.querySelector("#li6col3"), true);
+const menu6 = new Menu(document.querySelector("#li6col4"), true);
+const menu7 = new Menu(document.querySelector("#li6col5"), true);
+const menu8 = new Menu(document.querySelector("#li6col6"), true);
+const menu9 = new Menu(document.querySelector("#li7col1"), true);
+const menu10 = new Menu(document.querySelector("#li7col2"), true);
+const menu11 = new Menu(document.querySelector("#li7col3"), true);
+const menu12 = new Menu(document.querySelector("#li7col4"), true);
+const menu13 = new Menu(document.querySelector("#li7col5"), true);
+const menu14 = new Menu(document.querySelector("#li7col6"), true);
