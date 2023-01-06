@@ -967,9 +967,10 @@ nav ul li:hover {
     right: 2%;
     bottom: 3.5%;
     width: 3%;
-    padding: .7em 1em .5em 1em;
+    padding: .6em;
     border-radius: 20%;
     background-color: #13d0ca;
+    box-shadow: .2em .2em 0em 0em rgb(204, 195, 184);
 }
 
 @media all and (max-width: 1100px) {
