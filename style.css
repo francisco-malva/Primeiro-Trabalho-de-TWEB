@@ -966,7 +966,8 @@ nav ul li:hover {
     position: fixed;
     right: 2%;
     bottom: 3.5%;
-    width: 3%;
+    width: 3vw;
+    height: 3vw;
     padding: .7em 1em .5em 1em;
     border-radius: 20%;
     background-color: #13d0ca;
