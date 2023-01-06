@@ -43,9 +43,6 @@ nav ul {
 
 #sandwich-nav {
     width: 100%;
-}
-
-#sandwich-nav {
     display: none;
 }
 
@@ -1072,6 +1069,24 @@ nav ul li:hover {
         color: darkblue;
         text-decoration: underline;
     }
+
+    #search-sandwich li {
+        display: none;
+    }
+
+    #search-sandwich ul,
+    #sandwich ul * {
+    list-style-type: none;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+    .active-sandwich,
+    .active-sandwich * {
+    display: block !important;
+    opacity: 1 !important;
+}
 
     #brand-banner {
         display: none;

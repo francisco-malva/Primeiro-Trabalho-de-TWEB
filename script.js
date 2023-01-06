@@ -286,3 +286,4 @@ const saleCalculator = new SaleCalculator(document.querySelector("#sale"));
 const financeCalculator = new FinanceCalculator(document.querySelector("#finance"));
 const slideshow = new Slideshow(document.querySelector(".carrossel"));
 const menu = new Menu(document.querySelector("#sandwich-nav"));
+const menu2 = new Menu(document.querySelector("#search-sandwich"));
