@@ -67,6 +67,7 @@ nav ul {
 
 .menu-button:hover {
     color: black;
+    cursor: pointer;
 }
 
 .nav-display {
@@ -1026,7 +1027,7 @@ nav ul li:hover {
         text-align: center;
     }
 
-    #search-mediaq button{
+    #search-mediaq button {
         width: 100%;
         background-color: #13d0ca;
         color: white;
@@ -1034,11 +1035,35 @@ nav ul li:hover {
         border: #13d0ca 3px solid;
         padding: 1.2em;
         font-size: larger;
+        margin: 0.25em 0 0.25em 0em;
     }
 
-    #search-mediaq ul
+    #search-mediaq button {
+        cursor: pointer;
+    }
 
-    
+    #search-mediaq ul {
+        display: none;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    #search-mediaq ul li {
+        font-weight: normal;
+        background-color: rgb(230, 230, 230);
+        margin: 5px 0px 5px 0px;
+        padding: 15px 0px 15px 10px;
+    }
+
+    #search-mediaq ul li:hover {
+        background-color: white;
+        border-width: 0px 0px 1px 0px;
+        padding-bottom: 14px;
+        border-style: solid;
+        border-color: #13d0ca;
+    }
+
+
 
     /*
     #search-mediaq:nth-child(2),
