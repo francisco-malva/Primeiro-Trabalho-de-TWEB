@@ -1063,68 +1063,6 @@ nav ul li:hover {
         border-color: #13d0ca;
     }
 
-
-
-    /*
-    #search-mediaq:nth-child(2),
-    #search-mediaq:nth-child(3) {
-       
-    }
-
-    #search-mediaq:nth-child(3) {
-        font-size: small;
-    }
-
-    #search-mediaq:last-child {
-        color: gray;
-        border-radius: 9px;
-        border: #7c868d 3px solid;
-        padding: 2em 3em;
-    }
-
-    #search-mediaq:last-child:hover {
-        cursor: pointer;
-        color: darkblue;
-        text-decoration: underline;
-    }
-
-    #search-mediaq button {
-        background-color: #13d0ca;
-        border: none;
-        border-radius: .2em;
-        padding: .2em;
-        color: white;
-        font-weight: bold;
-        font-size: small;
-    }
-
-    #search-mediaq button:hover {
-        cursor: pointer;
-    }
-
-    #search-sandwich li {
-        display: block;
-        text-align: left;
-        font-size: smaller;
-        border: none;
-    }
-
-    #search-sandwich li:nth-child(2):hover,
-    #search-sandwich li:nth-child(3):hover {
-        border: none;
-        background-color: none;
-    }
-
-    #search-sandwich ul,
-    #search-sandwich ul * {
-        text-align: left;
-        list-style-type: none;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-    */
-
     .active-sandwich,
     .active-sandwich * {
         display: block !important;
