@@ -980,6 +980,7 @@ nav ul li:hover {
     #sandwich-nav {
         display: flex;
         flex-direction: column;
+        max-width: 93%;
     }
 
     #sandwich-nav div {
