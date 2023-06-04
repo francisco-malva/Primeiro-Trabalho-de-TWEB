@@ -282,6 +282,20 @@ class Menu {
     }
 }
 
+class MenuSlide {
+
+    #toggleMenu() {
+        this.navList.classList.toggle("carrossel");
+    }
+
+    constructor(root) {
+        this.navList = root.querySelector("div");
+        root.querySelector("button").onclick = this.#toggleMenu.bind(this);
+    }
+}
+
+
+
 const saleCalculator = new SaleCalculator(document.querySelector("#sale"));
 const financeCalculator = new FinanceCalculator(document.querySelector("#finance"));
 const slideshow = new Slideshow(document.querySelector(".carrossel"));

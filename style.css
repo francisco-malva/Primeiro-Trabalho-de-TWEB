@@ -1110,6 +1110,13 @@ nav ul li:hover {
         font-size: .6em;
     }
 
+    #opportunities-info ul{
+       flex-direction: column;
+    }
+
+    #opportunities-info ul li{
+        width: 40%;
+    }
     .cars:nth-child(3) {
         display: none;
     }
